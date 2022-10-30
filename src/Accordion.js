@@ -1,26 +1,19 @@
 import React from "react";
 import accordions from "./data";
 
-import { useState, useEffect } from "react";
-
 import styles from "./Accordion.module.css";
 
-function According() {
-  const [toggle, setToggle] = useState(false);
+import Questions from "./Questions";
 
+function According() {
   return (
     <div className={styles.container}>
-      <div>questions and answers about login</div>
-      <ul>
+      <h3>questions and answers about login</h3>
+      <div>
         {accordions.map((accordion) => {
-          return (
-            <li>
-              <h4>{accordion.title}</h4>
-              <p>{accordion.info}</p>
-            </li>
-          );
+          return <Questions key={accordion.id} {...accordion} />;
         })}
-      </ul>
+      </div>
     </div>
   );
 }
