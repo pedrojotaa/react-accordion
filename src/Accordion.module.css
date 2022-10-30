@@ -1,7 +1,27 @@
-.container{
+.container {
   background-color: #fff;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  text-align: center;
   padding: 1rem 2rem;
+}
+
+.list {
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.list:last-child{
+  margin-bottom: 0;
+}
+
+.list_btn {
+  font-size: 2rem;
+  border-radius: 50%;
+  background-color: gray;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
 }
